@@ -15,4 +15,9 @@ public class Library {
             booksCurrentlyAvilable[i] = new Book("Book Number: " + (i + 1));
         }
     }
+
+    public Library(Book[] booksCurrentlyAvilable) {
+        this.booksCurrentlyAvilable = booksCurrentlyAvilable;
+    }
+
 }
