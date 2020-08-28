@@ -42,4 +42,10 @@ public class Library {
     public int hashCode() {
         return Arrays.hashCode(getBooksCurrentlyAvilable());
     }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(booksCurrentlyAvilable);
+
+    }
 }
