@@ -20,4 +20,12 @@ public class Library {
         this.booksCurrentlyAvilable = booksCurrentlyAvilable;
     }
 
+    public Book[] getBooksCurrentlyAvilable() {
+        return booksCurrentlyAvilable;
+    }
+
+    public void setBooksCurrentlyAvilable(Book[] booksCurrentlyAvilable) {
+        this.booksCurrentlyAvilable = booksCurrentlyAvilable;
+    }
+
 }
