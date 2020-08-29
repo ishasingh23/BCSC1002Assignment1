@@ -1,6 +1,6 @@
 /*  Created by IntelliJ IDEA.
  *  User: Isha Singh
- *  Date: 21/08/20
+ *  Date: 23/08/20
  *  Time: 3:50 PM
  *  File Name : Library.java
  * */
@@ -11,6 +11,10 @@ import java.util.Arrays;
 public class Library {
     Book[] booksCurrentlyAvilable;
 
+    /**
+     * add constructor.
+     */
+
     public Library() {
         this.booksCurrentlyAvilable = new Book[10];
         for (int i = 0; i < booksCurrentlyAvilable.length; i++) {
@@ -18,13 +22,29 @@ public class Library {
         }
     }
 
+    /**
+     * this method adds the booksCurrentlyAvailable in library
+     *
+     * @param booksCurrentlyAvilable shows currently available books in library.
+     */
+
     public Library(Book[] booksCurrentlyAvilable) {
         this.booksCurrentlyAvilable = booksCurrentlyAvilable;
     }
 
+    /**
+     * @return this will return the booksCurrentlyAvailable in library.
+     */
+
     public Book[] getBooksCurrentlyAvilable() {
         return booksCurrentlyAvilable;
     }
+
+    /**
+     * this method adds the booksCurrentlyAvailale in library.
+     *
+     * @param booksCurrentlyAvilable
+     */
 
     public void setBooksCurrentlyAvilable(Book[] booksCurrentlyAvilable) {
         this.booksCurrentlyAvilable = booksCurrentlyAvilable;

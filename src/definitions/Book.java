@@ -1,6 +1,6 @@
 /*  Created by IntelliJ IDEA.
  *  User: Isha Singh
- *  Date: 21/08/20
+ *  Date: 23/08/20
  *  Time: 3:49 PM
  *  File Name : Book.java
  * */
@@ -19,12 +19,26 @@ public class Book {
         this.bookISBNNumber = "191500355";
     }
 
+    /**
+     * this method adds the bookName,nameOfAuthor, bookISBNNumber to the book.
+     *
+     * @param bookName
+     * @param nameOfAuthor
+     * @param bookISBNNumber
+     */
+
     public Book(String bookName, String nameOfAuthor, String bookISBNNumber) {
         this.bookName = bookName;
         this.nameOfAuthor = nameOfAuthor;
         this.bookISBNNumber = bookISBNNumber;
 
     }
+
+    /**
+     * adds bookName to the book
+     *
+     * @param bookName shows the name of the book.
+     */
 
     public Book(String bookName) {
         this.bookName = bookName;

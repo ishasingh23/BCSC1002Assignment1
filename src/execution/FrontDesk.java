@@ -1,6 +1,6 @@
 /*  Created by IntelliJ IDEA.
  *  User: Isha singh
- *  Date: 21/08/20
+ *  Date: 23/08/20
  *  Time: 3:50 PM
  *  File Name : FrontDesk.java
  * */
@@ -31,6 +31,7 @@ public class FrontDesk {
             clientInput = scanner.nextInt();
             switch (clientInput) {
                 case ISSUE_NEW_BOOK:
+                    System.out.println("issue a book");
                     System.out.println("enter your name: ");
                     scanner.nextLine();
                     String studentFirstName = scanner.nextLine();
@@ -42,6 +43,35 @@ public class FrontDesk {
                     myDetails.universitRollNumber(studentRollNumber);
                     myDetails.libraryInventory();
                     break;
+                case RETURN_PREVIOUS_BOOK:
+                    System.out.println("return the book");
+                    System.out.println("Enter your name: ");
+                    scanner.nextLine();
+                    String FirstName2 = scanner.nextLine();
+                    String MiddleName2 = scanner.nextLine();
+                    String LAstName2 = scanner.nextLine();
+                    System.out.println("Enter university roll no: ");
+                    long studentRollNo2 = scanner.nextLong();
+                    myDetails.studentName(FirstName2, MiddleName2, LAstName2);
+                    myDetails.universitRollNumber(studentRollNo2);
+                    break;
+                case SHOW_ALL_MY_ISSUED_BOOKS:
+                    System.out.println("show my issued books");
+                    System.out.println("Enter your name: ");
+                    scanner.nextLine();
+                    String FirstName1 = scanner.nextLine();
+                    String MiddleName1 = scanner.nextLine();
+                    String LAstName1 = scanner.nextLine();
+                    System.out.println("Enter university roll no: ");
+                    long studentRollNo1 = scanner.nextLong();
+                    myDetails.studentName(FirstName1, MiddleName1, LAstName1);
+                    myDetails.universitRollNumber(studentRollNo1);
+                    System.out.println("numberOfBooksIssuedByStudent: ");
+                    int numberOfBooksIssued = scanner.nextInt();
+                    myDetails.numberOfBookIssued(numberOfBooksIssued);
+                    break;
+                default:
+                    System.out.println("Wrong Choice");
             }
 
         } while (clientInput != EXIT);

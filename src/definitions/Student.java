@@ -1,6 +1,6 @@
 /*  Created by IntelliJ IDEA.
  *  User: Isha Singh
- *  Date: 21/08/20
+ *  Date: 23/08/20
  *  Time: 3:49 PM
  *  File Name : Student.java
  * */
@@ -49,17 +49,41 @@ public class Student {
         return Arrays.toString(namesOfBookIssued);
     }
 
+    /**
+     * this method adds the student name to Student.
+     *
+     * @param firstName  adds first name of student.
+     * @param middleName adds middle name of student.
+     * @param lastName   adds last name of student.
+     */
+
     public void studentName(String firstName, String middleName, String lastName) {
         System.out.println("Name of the student " + firstName + " " + middleName + "" + lastName);
     }
+
+    /**
+     * this method adds student roll number to the Student.
+     *
+     * @param rollNumber adds roll number of student.
+     */
 
     public void universitRollNumber(long rollNumber) {
         System.out.println("student university roll number :" + rollNumber);
     }
 
+    /**
+     * this method adds number of books to Student.
+     *
+     * @param numberOfBooks adds number of books
+     */
+
     public void numberOfBookIssued(int numberOfBooks) {
         System.out.println("number of book issued by students: " + numberOfBooks);
     }
+
+    /**
+     * this method will add the name of the book issued in Student.
+     */
 
     public void libraryInventory() {
         for (Book books : namesOfBookIssued) {
