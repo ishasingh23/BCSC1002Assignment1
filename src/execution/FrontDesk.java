@@ -12,70 +12,58 @@ import java.util.Scanner;
 
 
 public class FrontDesk {
-    public static final int ISSUE_NEW_BOOK = 1;
-    public static final int RETURN_PREVIOUS_BOOK = 2;
-    public static final int SHOW_ALL_MY_ISSUED_BOOKS = 3;
-    public static final int EXIT = 4;
+    private static final int ISSUE_NEW_BOOK = 1;
+    private static final int RETURN_PREVIOUSLY_BOOK = 2;
+    private static final int SHOW_MY_ALL_ISSUE_BOOK = 3;
+    private static final int EXIT = 4;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int clientInput;
-        Student myDetails = new Student();
+        Student mydetails = new Student();
         do {
-            System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-\n");
-            System.out.println("How may I help you today?\n");
-            System.out.println("1. Issue a new book for me.\n");
-            System.out.println("2. Return a previously issues book for me.\n");
-            System.out.println("3. Show me all my issues books.\n");
-            System.out.println("4. Exit.\n");
+            System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-");
+            System.out.println("how may I help you today?");
+            System.out.println("1. Issue a new for me: ");
+            System.out.println("2. Return a previously issues book for me: ");
+            System.out.println("3. Show my all issue book: ");
+            System.out.println("4. Exit: ");
             clientInput = scanner.nextInt();
+            System.out.println("Enter your name: ");
+            scanner.nextLine();
+            String FirstName = scanner.nextLine();
+            String MiddleName = scanner.nextLine();
+            String LAstName = scanner.nextLine();
+            System.out.println("Enter university roll no: ");
+            long studentRollNo = scanner.nextLong();
+            mydetails.studentName(FirstName, MiddleName, LAstName);
+            mydetails.universitRollNumber(studentRollNo);
+
             switch (clientInput) {
                 case ISSUE_NEW_BOOK:
-                    System.out.println("issue a book");
-                    System.out.println("enter your name: ");
-                    scanner.nextLine();
-                    String studentFirstName = scanner.nextLine();
-                    String studentMiddleName = scanner.nextLine();
-                    String studentLastName = scanner.nextLine();
-                    System.out.println("enter university roll number");
-                    long studentRollNumber = scanner.nextLong();
-                    myDetails.studentName(studentFirstName, studentMiddleName, studentLastName);
-                    myDetails.universitRollNumber(studentRollNumber);
-                    myDetails.libraryInventory();
+                    System.out.println("issue a new book");
+                    mydetails.libraryInventory();
                     break;
-                case RETURN_PREVIOUS_BOOK:
-                    System.out.println("return the book");
-                    System.out.println("Enter your name: ");
-                    scanner.nextLine();
-                    String FirstName2 = scanner.nextLine();
-                    String MiddleName2 = scanner.nextLine();
-                    String LAstName2 = scanner.nextLine();
-                    System.out.println("Enter university roll no: ");
-                    long studentRollNo2 = scanner.nextLong();
-                    myDetails.studentName(FirstName2, MiddleName2, LAstName2);
-                    myDetails.universitRollNumber(studentRollNo2);
+
+                case RETURN_PREVIOUSLY_BOOK:
+                    System.out.println("return the previuos book");
+                    mydetails.libraryInventory();
                     break;
-                case SHOW_ALL_MY_ISSUED_BOOKS:
+
+
+                case SHOW_MY_ALL_ISSUE_BOOK:
                     System.out.println("show my issued books");
-                    System.out.println("Enter your name: ");
-                    scanner.nextLine();
-                    String FirstName1 = scanner.nextLine();
-                    String MiddleName1 = scanner.nextLine();
-                    String LAstName1 = scanner.nextLine();
-                    System.out.println("Enter university roll no: ");
-                    long studentRollNo1 = scanner.nextLong();
-                    myDetails.studentName(FirstName1, MiddleName1, LAstName1);
-                    myDetails.universitRollNumber(studentRollNo1);
                     System.out.println("numberOfBooksIssuedByStudent: ");
                     int numberOfBooksIssued = scanner.nextInt();
-                    myDetails.numberOfBookIssued(numberOfBooksIssued);
+                    mydetails.numberOfBookIssued(numberOfBooksIssued);
+                    mydetails.libraryInventory();
                     break;
                 default:
                     System.out.println("Wrong Choice");
             }
-
         } while (clientInput != EXIT);
         scanner.close();
+
     }
 
 }
